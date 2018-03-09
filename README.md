@@ -27,4 +27,4 @@ As part of the Grow With Google Challenge Scholarship course hosted in [Udacity]
 
 ## Preview
 
-![screenshot of an android ide and program](https://github.com/roylouislgarcia/CourtCounter/Capture.PNG)
+![screenshot of an android ide and program](https://github.com/roylouislgarcia/CourtCounter/blob/master/Capture.PNG)
