@@ -45,11 +45,6 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamA(scoreTeamA);
     }
 
-    public void resetTeamA(View view){
-        scoreTeamA = 0;
-        displayForTeamA(scoreTeamA);
-    }
-
     /**
      * Displays the given score for Team B.
      */
@@ -75,9 +70,11 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamB(scoreTeamB);
     }
 
-    public void resetTeamB(View view){
+    public void resetGame(View view){
         scoreTeamB = 0;
+        scoreTeamA = 0;
         displayForTeamB(scoreTeamB);
+        displayForTeamA(scoreTeamA);
     }
 
 
