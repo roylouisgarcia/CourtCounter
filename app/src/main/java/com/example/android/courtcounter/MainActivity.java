@@ -7,17 +7,38 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+
     int scoreTeamA = 0;
     int scoreTeamB = 0;
+    static final String SCOREA = "Score for Team A";
+    static final String SCOREB = "Score for Team B";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState); // Always call the superclass first
+
+
+        // Check whether we're recreating a previously destroyed instance
+        if (savedInstanceState != null) {
+            // Restore value of members from saved state
+            scoreTeamA = savedInstanceState.getInt(SCOREA);
+            scoreTeamB = savedInstanceState.getInt(SCOREB);
+        }
         setContentView(R.layout.activity_main);
         displayForTeamA(scoreTeamA);
         displayForTeamB(scoreTeamB);
 
+    }
 
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save the user's current game state
+        savedInstanceState.putInt(SCOREA, scoreTeamA);
+        savedInstanceState.putInt(SCOREB, scoreTeamB);
+
+        // Always call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
     }
 
     /**
